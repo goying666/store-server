@@ -18,7 +18,8 @@ public class JoinController {
 
     @PostMapping(consumes = "multipart/form-data")
     @ResponseBody
-    public ResponseEntity addRecordingFile(@RequestParam("json") String storeInfo, @RequestParam("photo") MultipartFile[] photos) {
+    public ResponseEntity addRecordingFile(@RequestParam("json") String storeInfo,
+                                           @RequestParam("photo") MultipartFile[] photos) {
         return storeServiceImpl.addStore(storeInfo, photos);
     }
 }
